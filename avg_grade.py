@@ -2,8 +2,8 @@ import csv
 def table(file_path):
     data=[]
     with open(file_path, 'r') as file:
-        reader=csv.DictReader(file)
-        for row in reader:
+        csv_file=csv.DictReader(file)
+        for row in csv_file:
             data.append(row)
     return data
 def cal_avgGrade(student_grades):
